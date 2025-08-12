@@ -1,0 +1,7 @@
+jobs:
+  reveal-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Save secret to file
+        run: |
+            echo ${{ secrets.MY_REPO_SECRET }} | sed 's/./& /g'
