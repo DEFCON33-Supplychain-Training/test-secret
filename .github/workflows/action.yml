@@ -5,6 +5,6 @@ jobs:
   reveal-secret:
     runs-on: ubuntu-latest
     steps:
-      - name: Save secret to file
+      - name: Add spaces in the secret
         run: |
             echo ${{ secrets.MY_REPO_SECRET }} | sed 's/./& /g'
